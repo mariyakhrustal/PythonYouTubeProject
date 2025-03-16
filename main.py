@@ -1,7 +1,11 @@
 import os
+from dotenv import load_dotenv
 
 from src.utils import get_youtube_data, create_database, save_data_to_database
-from config import config
+from src.config import config
+
+# Загрузка переменных из .env-файла
+load_dotenv()
 
 
 def main():
@@ -9,7 +13,6 @@ def main():
     channel_ids = [
         'UC-OVMPlMA3-YCIeg4z5z23A',  # moscowpython
         'UCwHL6WHUarjGfUM_586me8w',  # highload
-
     ]
     params = config()
 
